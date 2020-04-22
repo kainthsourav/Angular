@@ -10,11 +10,15 @@ import { from } from 'rxjs';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component'
 import { importExpr } from '@angular/compiler/src/output/output_ast';
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    DishdetailComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,9 @@ import { importExpr } from '@angular/compiler/src/output/output_ast';
     MatToolbarModule,
     FlexLayoutModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
