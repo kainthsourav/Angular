@@ -22,9 +22,9 @@ featuredLeader:Leader;
     private dishService:DishService,private leaderService:LeaderService) { }
 
   ngOnInit(): void {
-    this.dish=this.dishService.getFeautredDish();
-    this.promotion=this.promotionService.getFeaturedPromotion();
-    this.featuredLeader=this.leaderService.getFeaturedLeader();
+    this.dishService.getFeautredDish().then(dish=>this.dish=dish);
+   this.promotionService.getFeaturedPromotion().then(promotion=>this.promotion=promotion);
+    this.leaderService.getFeaturedLeader().then(featuredLeader=>this.featuredLeader=featuredLeader);
   }
 
 }
