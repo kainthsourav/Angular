@@ -20,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import {AppRoutingModule} from "../app/app-routing/app-routing.module";
 
+import{DishService} from '../app/Services/dish.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,9 @@ import {AppRoutingModule} from "../app/app-routing/app-routing.module";
     MatButtonModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    DishService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
