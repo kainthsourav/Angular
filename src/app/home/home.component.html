@@ -44,3 +44,7 @@ fxLayoutGap="10px">
         </mat-card-content>
     </mat-card>
 </div>
+<div [hidden]="featuredLeader" fxLayoutAlign.gt-md="center">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+  </div>
+
